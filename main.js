@@ -1,12 +1,12 @@
 function createGame(player1, hour, player2, group) {
   return `
     <li>
-      <img
+      <div class="tooltip1" data-tooltip="${player1}"><img
         src="./assets/icon-${player1}.svg"
         alt="Bandeira ${player1}"
-      />
+      /></div>
       <div><strong>${hour}</strong>grupo ${group}</div>
-      <img src="./assets/icon-${player2}.svg" alt="Bandeira ${player2}" />
+      <div class="tooltip2" data-tooltip="${player2}"><img src="./assets/icon-${player2}.svg" alt="Bandeira ${player2}" /></div>
     </li>
     
   `
