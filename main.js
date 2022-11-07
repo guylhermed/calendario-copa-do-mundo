@@ -1,6 +1,6 @@
 function createGame(player1, hour, player2, group) {
   return `
-    <li>
+    <li id="${group}">
       <div class="tooltip1" data-tooltip="${player1}"><img
         src="./assets/icon-${player1}.svg"
         alt="Bandeira ${player1}"
@@ -69,3 +69,13 @@ document.querySelector("#cards").innerHTML =
       createGame("portugal", "13:00", "gana", "h") +
       createGame("brasil", "16:00", "servia", "g")
   )
+
+function showhide(el) {
+  var display = document.getElementById(el).style.display;
+    if(display == "none"){
+      document.getElementById(el).style.display = "inline-flex"
+    }
+  else{
+    document.getElementById(el).style.display = 'none';
+  }
+}

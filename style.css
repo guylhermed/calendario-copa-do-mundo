@@ -78,15 +78,25 @@ header p {
 }
 
 .menuhorizontal li {
+  /* border: 1px solid green; */
   border-radius: 7px;
   background-color: rgba(0, 0, 0, 0.6);
   display: inline-flex;
   padding: 02px;
   margin: 2px;
   justify-content: space-between;
+
+  text-decoration: none;
+  padding: 06px;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: var(--card-color-primary);
+  font-weight: 300;
+  cursor: pointer;
 }
 
-.menuhorizontal a {
+/* .menuhorizontal a {
+  border: 1px solid yellow;
   display: block;
   text-decoration: none;
   padding: 6px;
@@ -94,7 +104,7 @@ header p {
   text-transform: uppercase;
   color: var(--card-color-primary);
   font-weight: 300;
-}
+} */
 
 #cards {
   display: flex;
