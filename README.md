@@ -4,7 +4,7 @@
 
 > Trilha Explorer
 
-Projeto construído no evento Next Level Week Copa da Rocketseat.
+Projeto desenvolvido no evento Next Level Week Copa (NLW) da Rocketseat, em processo de melhorias e implementação de novas utilidades.
 
 [🔗 Clique aqui para acessar](https://guylhermed.github.io/calendario-copa-do-mundo/)
 
