@@ -1,6 +1,17 @@
+// Mostrar/Esconder os grupos selecionados por botão
+// function showhide(el) {
+//   var display = document.querySelector("." + el).style.display
+//   if (display == "none") {
+//     document.querySelector("." + el).style.display = "inline-flex"
+//   } else {
+//     document.querySelector("." + el).style.display = "none"
+//   }
+// }
+
+// Criar o jogo
 function createGame(player1, hour, player2, group) {
   return `
-    <li id="${group}">
+    <li id="${group}" class="${group}">
       <div class="tooltip1" data-tooltip="${player1}"><img
         src="./assets/icon-${player1}.svg"
         alt="Bandeira ${player1}"
@@ -12,6 +23,7 @@ function createGame(player1, hour, player2, group) {
   `
 }
 
+// Criar o cartão do dia
 let delay = -0.2
 function createCard(rodada, date, day, games) {
   delay = delay + 0.2
@@ -27,6 +39,7 @@ function createCard(rodada, date, day, games) {
   `
 }
 
+// Colocar cards dos jogos no HTML
 document.querySelector("#cards").innerHTML =
   createCard(
     "1",
@@ -142,18 +155,12 @@ document.querySelector("#cards").innerHTML =
       createGame("servia", "16:00", "suiça", "g")
   )
 
-// function showhide(el) {
-//   var display = document.getElementById(el).style.display
-//   if (display == "none") {
-//     document.getElementById(el).style.display = "inline-flex"
-//   } else {
-//     document.getElementById(el).style.display = "none"
-//   }
-// }
-
+// Modificações nos estilos para mostrar/esconder fase de grupo ou fase mata-mata
 function mostrarMataMata() {
   var grupos = document.getElementById("cards")
   var mata = document.getElementById("matamata")
+  var botaomata = document.querySelector(".botaomatamata")
+  var botaogrupos = document.querySelector(".botaogrupo")
 
   if (grupos.style.display === "flex") {
     grupos.style.display = "none"
@@ -166,11 +173,37 @@ function mostrarMataMata() {
   } else {
     mata.style.display = "flex"
   }
+
+  if (botaomata.style.color === "var(--card-color-primary)") {
+    botaomata.style.color = "white"
+  } else {
+    botaomata.style.color = "white"
+  }
+
+  if (botaomata.style.border === "none") {
+    botaomata.style.border = "1px solid white"
+  } else {
+    botaomata.style.border = "1px solid white"
+  }
+
+  if (botaogrupos.style.color === "white") {
+    botaogrupos.style.color = "var(--card-color-primary)"
+  } else {
+  }
+  botaogrupos.style.color = "var(--card-color-primary)"
+
+  if (botaogrupos.style.border === "1px solid white") {
+    botaogrupos.style.border = "none"
+  } else {
+    botaogrupos.style.border = "none"
+  }
 }
 
 function mostrarGrupos() {
   var mata = document.getElementById("matamata")
   var grupos = document.getElementById("cards")
+  var botaogrupos = document.querySelector(".botaogrupo")
+  var botaomata = document.querySelector(".botaomatamata")
 
   if (mata.style.display === "flex") {
     mata.style.display = "none"
@@ -182,5 +215,29 @@ function mostrarGrupos() {
     grupos.style.display = "flex"
   } else {
     grupos.style.display = "flex"
+  }
+
+  if (botaogrupos.style.color === "var(--card-color-primary)") {
+    botaogrupos.style.color = "white"
+  } else {
+    botaogrupos.style.color = "white"
+  }
+
+  if (botaogrupos.style.border === "none") {
+    botaogrupos.style.border = "1px solid white"
+  } else {
+    botaogrupos.style.border = "1px solid white"
+  }
+
+  if (botaomata.style.color === "white") {
+    botaomata.style.color = "var(--card-color-primary)"
+  } else {
+  }
+  botaomata.style.color = "var(--card-color-primary)"
+
+  if (botaomata.style.border === "1px solid white") {
+    botaomata.style.border = "none"
+  } else {
+    botaomata.style.border = "none"
   }
 }

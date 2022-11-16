@@ -53,6 +53,7 @@ header img {
 .menu {
   width: auto;
   margin-inline: auto;
+  margin-bottom: 3.5vh;
   display: flex;
   flex-direction: row;
   text-align: center;
@@ -63,7 +64,7 @@ header img {
 header button {
   font-size: 20px;
   text-transform: uppercase;
-  color: var(--card-color-primary);
+
   font-weight: 500;
 
   cursor: pointer;
@@ -71,7 +72,17 @@ header button {
   padding-block: 5px;
   padding-inline: 10px;
   border-radius: 10px;
+}
+
+.botaogrupo {
+  border: 1px solid white;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.botaomatamata {
   border: none;
+  color: var(--card-color-primary);
   background-color: rgba(0, 0, 0, 0.6);
 }
 
@@ -108,17 +119,6 @@ header button {
   font-weight: 300;
   cursor: pointer;
 }
-
-/* .menuhorizontal a {
-  border: 1px solid yellow;
-  display: block;
-  text-decoration: none;
-  padding: 6px;
-  font-size: 18px;
-  text-transform: uppercase;
-  color: var(--card-color-primary);
-  font-weight: 300;
-} */
 
 #cards {
   display: flex;

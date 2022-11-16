@@ -34,24 +34,32 @@
       <header>
         <img src="./assets/logocatar.png" alt="Logo da copa do catar 2022" />
         <div class="menu">
-          <button onclick="mostrarGrupos()" class="">fase de grupos</button>
-          <button onclick="mostrarMataMata()" class="">fase de mata-mata</button>
+          <button class="botaogrupo" onclick="mostrarGrupos()">
+            fase de grupos
+          </button>
+          <button class="botaomatamata" onclick="mostrarMataMata()">
+            fase de mata-mata
+          </button>
         </div>
       </header>
 
-      <div class="menuhorizontal">
+      <!-- <div class="menuhorizontal">
         <ul>
-          <li onclick="showhide('a')">Grupo A</li>
+          <li id="a" onclick="showhide('a')">Grupo A</li>
           <li onclick="showhide('b')">Grupo B</li>
           <li onclick="showhide('c')">Grupo C</li>
-          <li onclick="showhide('d')">Grupo D</a></li>
-          <li onclick="showhide('e')">Grupo E</a></li>
-          <li onclick="showhide('f')">Grupo F</a></li>
-          <li onclick="showhide('g')">Grupo G</a></li>
-          <li onclick="showhide('h')">Grupo H</a></li>
+          <li onclick="showhide('d')">Grupo D</li>
+          <li onclick="showhide('e')">Grupo E</li>
+          <li onclick="showhide('f')">Grupo F</li>
+          <li onclick="showhide('g')">Grupo G</li>
+          <li onclick="showhide('h')">Grupo H</li>
         </ul>
-      </div>
-      <main id="matamata"><a target="_blank" href="./assets/matamatagrande.png"><img src="./assets/matamata.PNG" alt=""></a></main>
+      </div> -->
+      <main id="matamata">
+        <a target="_blank" href="./assets/matamatagrande.png"
+          ><img src="./assets/matamata.PNG" alt=""
+        /></a>
+      </main>
       <main id="cards"></main>
     </div>
     <script src="./main.js" defer></script>
