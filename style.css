@@ -31,7 +31,7 @@ body {
   background-image: url(./assets/bg.png);
   background-position: top center;
   overflow: overlay;
-  padding-bottom: 2%;
+  padding-bottom: 4rem;
 }
 
 #app {
@@ -128,13 +128,14 @@ header button {
 
 #matamata {
   display: none;
-  direction: column;
+  flex-direction: column;
 }
 
 #matamata a {
   display: flex;
   direction: column;
-  margin: auto;
+  margin-inline: auto;
+  margin-bottom: 2rem;
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -144,6 +145,13 @@ header button {
 #matamata img {
   margin: auto;
   width: 100%;
+}
+
+#cardsmata {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
 }
 
 .card {
@@ -278,7 +286,10 @@ header h2 {
   animation: fromTop 1s 0.3s backwards;
 }
 
-#matamata img:hover,
+#matamata img:hover {
+  transform: scale(1.01);
+}
+
 header img:hover {
   transform: scale(1.03);
 }
@@ -332,6 +343,15 @@ header img,
 
 @media (min-width: 00px) {
   #cards {
+    max-width: 1920px;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: 00px) {
+  #cardsmata {
     max-width: 1920px;
     justify-content: center;
     flex-direction: row;

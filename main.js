@@ -8,7 +8,7 @@
 //   }
 // }
 
-// Criar o jogo
+// Criar o jogo da fase de grupos
 function createGame(player1, hour, player2, group) {
   return `
     <li id="${group}" class="${group}">
@@ -23,7 +23,22 @@ function createGame(player1, hour, player2, group) {
   `
 }
 
-// Criar o cartão do dia
+// Criar o jogo da fase de mata
+function createGameMata(player1, hour, player2, jogo) {
+  return `
+    <li id="${jogo}" class="${jogo}">
+      <div class="tooltip1" data-tooltip="${player1}"><img
+        src="./assets/${player1}.png"
+        alt="Time ${player1}"
+      /></div>
+      <div><strong>${hour}</strong>jogo ${jogo}</div>
+      <div class="tooltip2" data-tooltip="${player2}"><img src="./assets/${player2}.png" alt="Time ${player2}" /></div>
+    </li>
+    
+  `
+}
+
+// Criar o cartão do dia da fase de grupos
 let delay = -0.2
 function createCard(rodada, date, day, games) {
   delay = delay + 0.2
@@ -39,7 +54,85 @@ function createCard(rodada, date, day, games) {
   `
 }
 
-// Colocar cards dos jogos no HTML
+// Criar o cartão do dia da fase de mata
+function createCardMata(rodada, date, day, games) {
+  delay = delay + 0.2
+  return `
+  <div class="card" style="animation-delay: ${delay}s">
+      <h2>${date} <span>${day}</span></h2>
+      <p>${rodada}</p>
+
+      <ul>
+        ${games}          
+      </ul>
+    </div>
+  `
+}
+
+// Colocar cards dos jogos da fase de mata no HTML
+document.querySelector("#cardsmata").innerHTML =
+  createCardMata(
+    "oitavas",
+    "03/12",
+    "sábado",
+    createGameMata("1A", "12:00", "2B", "1") +
+      createGameMata("1C", "16:00", "2D", "2")
+  ) +
+  createCardMata(
+    "oitavas",
+    "04/12",
+    "domingo",
+    createGameMata("1B", "12:00", "2A", "3") +
+      createGameMata("1D", "16:00", "2C", "4")
+  ) +
+  createCardMata(
+    "oitavas",
+    "05/12",
+    "segunda",
+    createGameMata("1E", "12:00", "2F", "5") +
+      createGameMata("1G", "16:00", "2H", "6")
+  ) +
+  createCardMata(
+    "oitavas",
+    "06/12",
+    "terça",
+    createGameMata("1F", "12:00", "2E", "7") +
+      createGameMata("1H", "16:00", "2G", "8")
+  ) +
+  createCardMata(
+    "quartas",
+    "09/12",
+    "sexta",
+    createGameMata("V5", "12:00", "V6", "9") +
+      createGameMata("V1", "16:00", "V2", "10")
+  ) +
+  createCardMata(
+    "quartas",
+    "10/12",
+    "sábado",
+    createGameMata("V7", "12:00", "V8", "11") +
+      createGameMata("V3", "16:00", "V4", "12")
+  ) +
+  createCardMata(
+    "semifinal 1",
+    "13/12",
+    "terça",
+    createGameMata("V9", "16:00", "V10", "13")
+  ) +
+  createCardMata(
+    "semifinal 2",
+    "14/12",
+    "quarta",
+    createGameMata("V11", "16:00", "V12", "14")
+  ) +
+  createCardMata(
+    "final",
+    "18/12",
+    "domingo",
+    createGameMata("V13", "12:00", "V14", "15")
+  )
+
+// Colocar cards dos jogos da fase de grupos no HTML
 document.querySelector("#cards").innerHTML =
   createCard(
     "1",
