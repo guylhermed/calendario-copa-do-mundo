@@ -53,7 +53,7 @@ header img {
 .menu {
   width: auto;
   margin-inline: auto;
-  margin-bottom: 3.5vh;
+  margin-bottom: 1.3rem;
   display: flex;
   flex-direction: row;
   text-align: center;
@@ -74,15 +74,20 @@ header button {
   border-radius: 10px;
 }
 
-.botaogrupo {
-  border: 1px solid white;
+.menu a {
   color: white;
+  text-decoration: none;
+  color: var(--card-color-primary);
+  border: none;
+}
+
+.botaogrupo {
+  border: none;
   background-color: rgba(0, 0, 0, 0.6);
 }
 
 .botaomatamata {
   border: none;
-  color: var(--card-color-primary);
   background-color: rgba(0, 0, 0, 0.6);
 }
 
@@ -120,6 +125,12 @@ header button {
   cursor: pointer;
 }
 
+.menuhorizontal a {
+  text-decoration: none;
+  color: var(--card-color-primary);
+  font-weight: 500;
+}
+
 #cards {
   display: flex;
   flex-direction: column;
@@ -127,7 +138,7 @@ header button {
 }
 
 #matamata {
-  display: none;
+  display: flex;
   flex-direction: column;
 }
 
