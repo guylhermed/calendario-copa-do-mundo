@@ -1,4 +1,5 @@
 mostrarMataMata()
+mostrarOitavas()
 
 // Criar o jogo da fase de mata
 function createGameMata(player1, hour, player2, jogo) {
@@ -60,40 +61,9 @@ document.querySelector("#cardsmata").innerHTML =
     "terça",
     createGameMata("aguardando", "12:00", "aguardando", "7") +
       createGameMata("aguardando", "16:00", "aguardando", "8")
-  ) +
-  createCardMata(
-    "quartas",
-    "09/12",
-    "sexta",
-    createGameMata("aguardando", "12:00", "aguardando", "9") +
-      createGameMata("aguardando", "16:00", "aguardando", "10")
-  ) +
-  createCardMata(
-    "quartas",
-    "10/12",
-    "sábado",
-    createGameMata("aguardando", "12:00", "aguardando", "11") +
-      createGameMata("aguardando", "16:00", "aguardando", "12")
-  ) +
-  createCardMata(
-    "semifinal 1",
-    "13/12",
-    "terça",
-    createGameMata("aguardando", "16:00", "aguardando", "13")
-  ) +
-  createCardMata(
-    "semifinal 2",
-    "14/12",
-    "quarta",
-    createGameMata("aguardando", "16:00", "aguardando", "14")
-  ) +
-  createCardMata(
-    "final",
-    "18/12",
-    "domingo",
-    createGameMata("aguardando", "12:00", "aguardando", "15")
   )
 
+// Modificações nos estilos para mostrar/esconder fase de grupo ou fase mata-mata
 function mostrarMataMata() {
   var botaomata = document.querySelector(".botaomatamata")
   var botaogrupos = document.querySelector(".botaogrupo")
@@ -125,5 +95,15 @@ function mostrarGrupos() {
     botaomata.style.backgroundColor = "rgba(0, 0, 0, 0.6)"
   } else {
     botaomata.style.backgroundColor = "rgba(0, 0, 0, 0.6)"
+  }
+}
+
+function mostrarOitavas() {
+  var botaooitavas = document.querySelector(".oitavas")
+
+  if (botaooitavas.style.backgroundColor === "rgba(0, 0, 0, 0.6)") {
+    botaooitavas.style.backgroundColor = "white"
+  } else {
+    botaooitavas.style.backgroundColor = "white"
   }
 }

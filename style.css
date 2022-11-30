@@ -83,7 +83,7 @@ header button {
 
 .botaogrupo {
   border: none;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: white;
 }
 
 .botaomatamata {
@@ -110,7 +110,7 @@ header button {
 .menuhorizontal li {
   /* border: 1px solid green; */
   border-radius: 7px;
-  background-color: rgba(0, 0, 0, 0.6);
+  /* background-color: rgba(0, 0, 0, 0.6); */
   display: inline-flex;
   padding: 02px;
   margin: 2px;
@@ -123,6 +123,38 @@ header button {
   color: var(--card-color-primary);
   font-weight: 300;
   cursor: pointer;
+}
+
+.oitavas {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.quartas {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.semifinais {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.final {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.primeirarodada {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.segundarodada {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.terceirarodada {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.todasrodadas {
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .menuhorizontal a {

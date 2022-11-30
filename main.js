@@ -1,12 +1,5 @@
-// Mostrar/Esconder os grupos selecionados por botão
-// function showhide(el) {
-//   var display = document.querySelector("." + el).style.display
-//   if (display == "none") {
-//     document.querySelector("." + el).style.display = "inline-flex"
-//   } else {
-//     document.querySelector("." + el).style.display = "none"
-//   }
-// }
+mostrarGrupos()
+mostrarTodasRodadas()
 
 // Criar o jogo da fase de grupos
 function createGame(player1, hour, player2, group) {
@@ -23,21 +16,6 @@ function createGame(player1, hour, player2, group) {
   `
 }
 
-// // Criar o jogo da fase de mata
-// function createGameMata(player1, hour, player2, jogo) {
-//   return `
-//     <li id="${jogo}" class="${jogo}">
-//       <div class="tooltip1" data-tooltip="${player1}"><img
-//         src="./assets/${player1}.png"
-//         alt="Time ${player1}"
-//       /></div>
-//       <div><strong>${hour}</strong>jogo ${jogo}</div>
-//       <div class="tooltip2" data-tooltip="${player2}"><img src="./assets/${player2}.png" alt="Time ${player2}" /></div>
-//     </li>
-
-//   `
-// }
-
 // Criar o cartão do dia da fase de grupos
 let delay = -0.2
 function createCard(rodada, date, day, games) {
@@ -53,84 +31,6 @@ function createCard(rodada, date, day, games) {
     </div>
   `
 }
-
-// // Criar o cartão do dia da fase de mata
-// function createCardMata(rodada, date, day, games) {
-//   delay = delay + 0.2
-//   return `
-//   <div class="card" style="animation-delay: ${delay}s">
-//       <h2>${date} <span>${day}</span></h2>
-//       <p>${rodada}</p>
-
-//       <ul>
-//         ${games}
-//       </ul>
-//     </div>
-//   `
-// }
-
-// // Colocar cards dos jogos da fase de mata no HTML
-// document.querySelector("#cardsmata").innerHTML =
-//   createCardMata(
-//     "oitavas",
-//     "03/12",
-//     "sábado",
-//     createGameMata("1A", "12:00", "2B", "1") +
-//       createGameMata("1C", "16:00", "2D", "2")
-//   ) +
-//   createCardMata(
-//     "oitavas",
-//     "04/12",
-//     "domingo",
-//     createGameMata("1B", "12:00", "2A", "3") +
-//       createGameMata("1D", "16:00", "2C", "4")
-//   ) +
-//   createCardMata(
-//     "oitavas",
-//     "05/12",
-//     "segunda",
-//     createGameMata("1E", "12:00", "2F", "5") +
-//       createGameMata("1G", "16:00", "2H", "6")
-//   ) +
-//   createCardMata(
-//     "oitavas",
-//     "06/12",
-//     "terça",
-//     createGameMata("1F", "12:00", "2E", "7") +
-//       createGameMata("1H", "16:00", "2G", "8")
-//   ) +
-//   createCardMata(
-//     "quartas",
-//     "09/12",
-//     "sexta",
-//     createGameMata("V5", "12:00", "V6", "9") +
-//       createGameMata("V1", "16:00", "V2", "10")
-//   ) +
-//   createCardMata(
-//     "quartas",
-//     "10/12",
-//     "sábado",
-//     createGameMata("V7", "12:00", "V8", "11") +
-//       createGameMata("V3", "16:00", "V4", "12")
-//   ) +
-//   createCardMata(
-//     "semifinal 1",
-//     "13/12",
-//     "terça",
-//     createGameMata("V9", "16:00", "V10", "13")
-//   ) +
-//   createCardMata(
-//     "semifinal 2",
-//     "14/12",
-//     "quarta",
-//     createGameMata("V11", "16:00", "V12", "14")
-//   ) +
-//   createCardMata(
-//     "final",
-//     "18/12",
-//     "domingo",
-//     createGameMata("V13", "12:00", "V14", "15")
-//   )
 
 // Colocar cards dos jogos da fase de grupos no HTML
 document.querySelector("#cards").innerHTML =
@@ -217,8 +117,8 @@ document.querySelector("#cards").innerHTML =
     "terça",
     createGame("holanda", "2 x 0", "catar", "a") +
       createGame("equador", "1 x 2", "senegal", "a") +
-      createGame("ira", "16:00", "estadosunidos", "b") +
-      createGame("paisdegales", "16:00", "inglaterra", "b")
+      createGame("ira", "0 x 1", "estadosunidos", "b") +
+      createGame("paisdegales", "0 x 3", "inglaterra", "b")
   ) +
   createCard(
     "3",
@@ -248,61 +148,47 @@ document.querySelector("#cards").innerHTML =
       createGame("servia", "16:00", "suiça", "g")
   )
 
-// // Modificações nos estilos para mostrar/esconder fase de grupo ou fase mata-mata
-// function mostrarMataMata() {
-//   var botaomata = document.querySelector(".botaomatamata")
-//   var botaogrupos = document.querySelector(".botaogrupo")
+// Modificações nos estilos para mostrar/esconder fase de grupo ou fase mata-mata
+function mostrarMataMata() {
+  var botaomata = document.querySelector(".botaomatamata")
+  var botaogrupos = document.querySelector(".botaogrupo")
 
-//   if (botaomata.style.color === "var(--card-color-primary)") {
-//     botaomata.style.color = "white"
-//   } else {
-//     botaomata.style.color = "white"
-//   }
+  if (botaomata.style.backgroundColor === "rgba(0, 0, 0, 0.6)") {
+    botaomata.style.backgroundColor = "white"
+  } else {
+    botaomata.style.backgroundColor = "white"
+  }
 
-//   if (botaomata.style.border === "none") {
-//     botaomata.style.border = "1px solid white"
-//   } else {
-//     botaomata.style.border = "1px solid white"
-//   }
+  if (botaogrupos.style.backgroundColor === "white") {
+    botaogrupos.style.backgroundColor = "rgba(0, 0, 0, 0.6)"
+  } else {
+    botaogrupos.style.backgroundColor = "rgba(0, 0, 0, 0.6)"
+  }
+}
 
-//   if (botaogrupos.style.color === "white") {
-//     botaogrupos.style.color = "var(--card-color-primary)"
-//   } else {
-//   }
-//   botaogrupos.style.color = "var(--card-color-primary)"
+function mostrarGrupos() {
+  var botaogrupos = document.querySelector(".botaogrupo")
+  var botaomata = document.querySelector(".botaomatamata")
 
-//   if (botaogrupos.style.border === "1px solid white") {
-//     botaogrupos.style.border = "none"
-//   } else {
-//     botaogrupos.style.border = "none"
-//   }
-// }
+  if (botaogrupos.style.backgroundColor === "rgba(0, 0, 0, 0.6)") {
+    botaogrupos.style.backgroundColor = "white"
+  } else {
+    botaogrupos.style.backgroundColor = "white"
+  }
 
-// function mostrarGrupos() {
-//   var botaogrupos = document.querySelector(".botaogrupo")
-//   var botaomata = document.querySelector(".botaomatamata")
+  if (botaomata.style.backgroundColor === "white") {
+    botaomata.style.backgroundColor = "rgba(0, 0, 0, 0.6)"
+  } else {
+    botaomata.style.backgroundColor = "rgba(0, 0, 0, 0.6)"
+  }
+}
 
-//   if (botaogrupos.style.color === "var(--card-color-primary)") {
-//     botaogrupos.style.color = "white"
-//   } else {
-//     botaogrupos.style.color = "white"
-//   }
+function mostrarTodasRodadas() {
+  var botaotodas = document.querySelector(".todasrodadas")
 
-//   if (botaogrupos.style.border === "none") {
-//     botaogrupos.style.border = "1px solid white"
-//   } else {
-//     botaogrupos.style.border = "1px solid white"
-//   }
-
-//   if (botaomata.style.color === "white") {
-//     botaomata.style.color = "var(--card-color-primary)"
-//   } else {
-//   }
-//   botaomata.style.color = "var(--card-color-primary)"
-
-//   if (botaomata.style.border === "1px solid white") {
-//     botaomata.style.border = "none"
-//   } else {
-//     botaomata.style.border = "none"
-//   }
-// }
+  if (botaotodas.style.backgroundColor === "rgba(0, 0, 0, 0.6)") {
+    botaotodas.style.backgroundColor = "white"
+  } else {
+    botaotodas.style.backgroundColor = "white"
+  }
+}

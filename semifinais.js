@@ -1,4 +1,5 @@
 mostrarMataMata()
+mostrarSemifinais()
 
 // Criar o jogo da fase de mata
 function createGameMata(player1, hour, player2, jogo) {
@@ -34,48 +35,6 @@ function createCardMata(rodada, date, day, games) {
 // Colocar cards dos jogos da fase de mata no HTML
 document.querySelector("#cardsmata").innerHTML =
   createCardMata(
-    "oitavas",
-    "03/12",
-    "sábado",
-    createGameMata("holanda", "12:00", "estadosunidos", "1") +
-      createGameMata("aguardando", "16:00", "aguardando", "2")
-  ) +
-  createCardMata(
-    "oitavas",
-    "04/12",
-    "domingo",
-    createGameMata("aguardando", "12:00", "aguardando", "3") +
-      createGameMata("inglaterra", "16:00", "senegal", "4")
-  ) +
-  createCardMata(
-    "oitavas",
-    "05/12",
-    "segunda",
-    createGameMata("aguardando", "12:00", "aguardando", "5") +
-      createGameMata("aguardando", "16:00", "aguardando", "6")
-  ) +
-  createCardMata(
-    "oitavas",
-    "06/12",
-    "terça",
-    createGameMata("aguardando", "12:00", "aguardando", "7") +
-      createGameMata("aguardando", "16:00", "aguardando", "8")
-  ) +
-  createCardMata(
-    "quartas",
-    "09/12",
-    "sexta",
-    createGameMata("aguardando", "12:00", "aguardando", "9") +
-      createGameMata("aguardando", "16:00", "aguardando", "10")
-  ) +
-  createCardMata(
-    "quartas",
-    "10/12",
-    "sábado",
-    createGameMata("aguardando", "12:00", "aguardando", "11") +
-      createGameMata("aguardando", "16:00", "aguardando", "12")
-  ) +
-  createCardMata(
     "semifinal 1",
     "13/12",
     "terça",
@@ -86,14 +45,9 @@ document.querySelector("#cardsmata").innerHTML =
     "14/12",
     "quarta",
     createGameMata("aguardando", "16:00", "aguardando", "14")
-  ) +
-  createCardMata(
-    "final",
-    "18/12",
-    "domingo",
-    createGameMata("aguardando", "12:00", "aguardando", "15")
   )
 
+// Modificações nos estilos para mostrar/esconder fase de grupo ou fase mata-mata
 function mostrarMataMata() {
   var botaomata = document.querySelector(".botaomatamata")
   var botaogrupos = document.querySelector(".botaogrupo")
@@ -125,5 +79,15 @@ function mostrarGrupos() {
     botaomata.style.backgroundColor = "rgba(0, 0, 0, 0.6)"
   } else {
     botaomata.style.backgroundColor = "rgba(0, 0, 0, 0.6)"
+  }
+}
+
+function mostrarSemifinais() {
+  var botaosemi = document.querySelector(".semifinais")
+
+  if (botaosemi.style.backgroundColor === "rgba(0, 0, 0, 0.6)") {
+    botaosemi.style.backgroundColor = "white"
+  } else {
+    botaosemi.style.backgroundColor = "white"
   }
 }

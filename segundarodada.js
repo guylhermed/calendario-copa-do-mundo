@@ -1,3 +1,6 @@
+mostrarGrupos()
+mostrarSegundaRodada()
+
 // Criar o jogo da fase de grupos
 function createGame(player1, hour, player2, group) {
   return `
@@ -70,87 +73,45 @@ document.querySelector("#cards").innerHTML =
 
 // Modificações nos estilos para mostrar/esconder fase de grupo ou fase mata-mata
 function mostrarMataMata() {
-  var grupos = document.getElementById("cards")
-  var mata = document.getElementById("matamata")
   var botaomata = document.querySelector(".botaomatamata")
   var botaogrupos = document.querySelector(".botaogrupo")
 
-  if (grupos.style.display === "flex") {
-    grupos.style.display = "none"
+  if (botaomata.style.backgroundColor === "rgba(0, 0, 0, 0.6)") {
+    botaomata.style.backgroundColor = "white"
   } else {
-    grupos.style.display = "none"
+    botaomata.style.backgroundColor = "white"
   }
 
-  if (mata.style.display === "none") {
-    mata.style.display = "flex"
+  if (botaogrupos.style.backgroundColor === "white") {
+    botaogrupos.style.backgroundColor = "rgba(0, 0, 0, 0.6)"
   } else {
-    mata.style.display = "flex"
-  }
-
-  if (botaomata.style.color === "var(--card-color-primary)") {
-    botaomata.style.color = "white"
-  } else {
-    botaomata.style.color = "white"
-  }
-
-  if (botaomata.style.border === "none") {
-    botaomata.style.border = "1px solid white"
-  } else {
-    botaomata.style.border = "1px solid white"
-  }
-
-  if (botaogrupos.style.color === "white") {
-    botaogrupos.style.color = "var(--card-color-primary)"
-  } else {
-  }
-  botaogrupos.style.color = "var(--card-color-primary)"
-
-  if (botaogrupos.style.border === "1px solid white") {
-    botaogrupos.style.border = "none"
-  } else {
-    botaogrupos.style.border = "none"
+    botaogrupos.style.backgroundColor = "rgba(0, 0, 0, 0.6)"
   }
 }
 
 function mostrarGrupos() {
-  var mata = document.getElementById("matamata")
-  var grupos = document.getElementById("cards")
   var botaogrupos = document.querySelector(".botaogrupo")
   var botaomata = document.querySelector(".botaomatamata")
 
-  if (mata.style.display === "flex") {
-    mata.style.display = "none"
+  if (botaogrupos.style.backgroundColor === "rgba(0, 0, 0, 0.6)") {
+    botaogrupos.style.backgroundColor = "white"
   } else {
-    mata.style.display = "none"
+    botaogrupos.style.backgroundColor = "white"
   }
 
-  if (grupos.style.display === "none") {
-    grupos.style.display = "flex"
+  if (botaomata.style.backgroundColor === "white") {
+    botaomata.style.backgroundColor = "rgba(0, 0, 0, 0.6)"
   } else {
-    grupos.style.display = "flex"
+    botaomata.style.backgroundColor = "rgba(0, 0, 0, 0.6)"
   }
+}
 
-  if (botaogrupos.style.color === "var(--card-color-primary)") {
-    botaogrupos.style.color = "white"
-  } else {
-    botaogrupos.style.color = "white"
-  }
+function mostrarSegundaRodada() {
+  var botaosegunda = document.querySelector(".segundarodada")
 
-  if (botaogrupos.style.border === "none") {
-    botaogrupos.style.border = "1px solid white"
+  if (botaosegunda.style.backgroundColor === "rgba(0, 0, 0, 0.6)") {
+    botaosegunda.style.backgroundColor = "white"
   } else {
-    botaogrupos.style.border = "1px solid white"
-  }
-
-  if (botaomata.style.color === "white") {
-    botaomata.style.color = "var(--card-color-primary)"
-  } else {
-  }
-  botaomata.style.color = "var(--card-color-primary)"
-
-  if (botaomata.style.border === "1px solid white") {
-    botaomata.style.border = "none"
-  } else {
-    botaomata.style.border = "none"
+    botaosegunda.style.backgroundColor = "white"
   }
 }
