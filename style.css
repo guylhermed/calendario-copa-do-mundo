@@ -402,7 +402,7 @@ header img,
   }
 }
 
-@media (min-width: 700px) {
+@media (min-width: 0px) {
   .menuhorizontal {
     max-width: 1920px;
     justify-content: center;
