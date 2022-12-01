@@ -39,27 +39,27 @@ document.querySelector("#cardsmata").innerHTML =
     "03/12",
     "sábado",
     createGameMata("holanda", "12:00", "estadosunidos", "1") +
-      createGameMata("aguardando", "16:00", "aguardando", "2")
+      createGameMata("argentina", "16:00", "australia", "2")
   ) +
   createCardMata(
     "oitavas",
     "04/12",
     "domingo",
-    createGameMata("aguardando", "12:00", "aguardando", "3") +
+    createGameMata("frança", "12:00", "polonia", "3") +
       createGameMata("inglaterra", "16:00", "senegal", "4")
   ) +
   createCardMata(
     "oitavas",
     "05/12",
     "segunda",
-    createGameMata("aguardando", "12:00", "aguardando", "5") +
+    createGameMata("aguardando", "12:00", "croacia", "5") +
       createGameMata("aguardando", "16:00", "aguardando", "6")
   ) +
   createCardMata(
     "oitavas",
     "06/12",
     "terça",
-    createGameMata("aguardando", "12:00", "aguardando", "7") +
+    createGameMata("marrocos", "12:00", "aguardando", "7") +
       createGameMata("aguardando", "16:00", "aguardando", "8")
   )
 

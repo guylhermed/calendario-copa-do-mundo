@@ -47,17 +47,17 @@ document.querySelector("#cards").innerHTML =
     "3",
     "30/11",
     "quarta",
-    createGame("tunisia", "12:00", "frança", "d") +
-      createGame("australia", "12:00", "dinamarca", "d") +
-      createGame("polonia", "16:00", "argentina", "c") +
-      createGame("arabiasaudita", "16:00", "mexico", "c")
+    createGame("tunisia", "1 x 0", "frança", "d") +
+      createGame("australia", "1 x 0", "dinamarca", "d") +
+      createGame("polonia", "0 x 2", "argentina", "c") +
+      createGame("arabiasaudita", "1 x 2", "mexico", "c")
   ) +
   createCard(
     "3",
     "01/12",
     "quinta",
-    createGame("croacia", "12:00", "belgica", "f") +
-      createGame("canada", "12:00", "marrocos", "f") +
+    createGame("croacia", "0 x 0", "belgica", "f") +
+      createGame("canada", "1 x 2", "marrocos", "f") +
       createGame("japao", "16:00", "espanha", "e") +
       createGame("costarica", "16:00", "alemanha", "e")
   ) +
