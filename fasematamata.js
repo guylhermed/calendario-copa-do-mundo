@@ -88,6 +88,12 @@ document.querySelector("#cardsmata").innerHTML =
     createGameMata("aguardando", "16:00", "aguardando", "14")
   ) +
   createCardMata(
+    "terceiro e quarto",
+    "17/12",
+    "sábado",
+    createGameMata("aguardando", "12:00", "aguardando", "15")
+  ) +
+  createCardMata(
     "final",
     "18/12",
     "domingo",
