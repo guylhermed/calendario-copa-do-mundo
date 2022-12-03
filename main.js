@@ -124,28 +124,28 @@ document.querySelector("#cards").innerHTML =
     "3",
     "30/11",
     "quarta",
-    createGame("tunisia", "12:00", "frança", "d") +
-      createGame("australia", "12:00", "dinamarca", "d") +
-      createGame("polonia", "16:00", "argentina", "c") +
-      createGame("arabiasaudita", "16:00", "mexico", "c")
+    createGame("tunisia", "1 x 0", "frança", "d") +
+      createGame("australia", "1 x 0", "dinamarca", "d") +
+      createGame("polonia", "0 x 2", "argentina", "c") +
+      createGame("arabiasaudita", "1 x 2", "mexico", "c")
   ) +
   createCard(
     "3",
     "01/12",
     "quinta",
-    createGame("croacia", "12:00", "belgica", "f") +
-      createGame("canada", "12:00", "marrocos", "f") +
-      createGame("japao", "16:00", "espanha", "e") +
-      createGame("costarica", "16:00", "alemanha", "e")
+    createGame("croacia", "0 x 0", "belgica", "f") +
+      createGame("canada", "1 x 2", "marrocos", "f") +
+      createGame("japao", "2 x 0", "espanha", "e") +
+      createGame("costarica", "2 x 4", "alemanha", "e")
   ) +
   createCard(
     "3",
     "02/12",
     "sexta",
-    createGame("coreiadosul", "12:00", "portugal", "h") +
-      createGame("gana", "12:00", "uruguai", "h") +
-      createGame("camaroes", "16:00", "brasil", "g") +
-      createGame("servia", "16:00", "suiça", "g")
+    createGame("coreiadosul", "2 x 1", "portugal", "h") +
+      createGame("gana", "0 x 2", "uruguai", "h") +
+      createGame("camaroes", "1 x 0", "brasil", "g") +
+      createGame("servia", "2 x 3", "suiça", "g")
   )
 
 // Modificações nos estilos para mostrar/esconder fase de grupo ou fase mata-mata
