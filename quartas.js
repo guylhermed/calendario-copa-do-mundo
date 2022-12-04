@@ -46,7 +46,7 @@ document.querySelector("#cardsmata").innerHTML =
     "10/12",
     "sábado",
     createGameMata("aguardando", "12:00", "aguardando", "11") +
-      createGameMata("aguardando", "16:00", "frança", "12")
+      createGameMata("inglaterra", "16:00", "frança", "12")
   )
 
 // Modificações nos estilos para mostrar/esconder fase de grupo ou fase mata-mata
