@@ -38,7 +38,7 @@ document.querySelector("#cardsmata").innerHTML =
     "quartas",
     "09/12",
     "sexta",
-    createGameMata("aguardando", "12:00", "aguardando", "9") +
+    createGameMata("croacia", "12:00", "brasil", "9") +
       createGameMata("holanda", "16:00", "argentina", "10")
   ) +
   createCardMata(
