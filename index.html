@@ -46,15 +46,28 @@
       <div class="menuhorizontal">
         <ul>
           <li class="primeirarodada">
-            <a href="./primeirarodada.html">1ª Rodada</a>
+            <a
+              onclick="filtro(1); alterarBackgroundBotaoRodada('primeirarodada')"
+              >1ª Rodada</a
+            >
           </li>
           <li class="segundarodada">
-            <a href="./segundarodada.html">2ª Rodada</a>
+            <a
+              onclick="filtro(2); alterarBackgroundBotaoRodada('segundarodada')"
+              >2ª Rodada</a
+            >
           </li>
           <li class="terceirarodada">
-            <a href="./terceirarodada.html">3ª Rodada</a>
+            <a
+              onclick="filtro(3); alterarBackgroundBotaoRodada('terceirarodada')"
+              >3ª Rodada</a
+            >
           </li>
-          <li class="todasrodadas"><a href="./index.html">todas</a></li>
+          <li class="todasrodadas">
+            <a onclick="filtro(0); alterarBackgroundBotaoRodada('todasrodadas')"
+              >todas</a
+            >
+          </li>
         </ul>
       </div>
       <main id="cards"></main>

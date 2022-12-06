@@ -1,5 +1,4 @@
-mostrarGrupos()
-mostrarTodasRodadas()
+alterarBackgroundBotaoRodada("todasrodadas")
 
 // Criar o jogo da fase de grupos
 function createGame(player1, hour, player2, group) {
@@ -148,6 +147,8 @@ document.querySelector("#cards").innerHTML =
       createGame("servia", "2 x 3", "suiça", "g")
   )
 
+const cards = document.querySelectorAll(".card")
+
 // Modificações nos estilos para mostrar/esconder fase de grupo ou fase mata-mata
 function mostrarMataMata() {
   var botaomata = document.querySelector(".botaomatamata")
@@ -166,29 +167,31 @@ function mostrarMataMata() {
   }
 }
 
-function mostrarGrupos() {
-  var botaogrupos = document.querySelector(".botaogrupo")
-  var botaomata = document.querySelector(".botaomatamata")
-
-  if (botaogrupos.style.backgroundColor === "rgba(0, 0, 0, 0.6)") {
-    botaogrupos.style.backgroundColor = "white"
-  } else {
-    botaogrupos.style.backgroundColor = "white"
-  }
-
-  if (botaomata.style.backgroundColor === "white") {
-    botaomata.style.backgroundColor = "rgba(0, 0, 0, 0.6)"
-  } else {
-    botaomata.style.backgroundColor = "rgba(0, 0, 0, 0.6)"
-  }
+function alterarBackgroundBotaoRodada(rodada) {
+  document.querySelectorAll(".menuhorizontal > ul > li").forEach((value) => {
+    let className = value.classList[0]
+    if (className === rodada) {
+      document.querySelector(`.${className}`).style.backgroundColor = "white"
+    } else {
+      document.querySelector(`.${className}`).style.backgroundColor =
+        "rgba(0, 0, 0, 0.6)"
+    }
+  })
 }
 
-function mostrarTodasRodadas() {
-  var botaotodas = document.querySelector(".todasrodadas")
+function filtro(filtro) {
+  let cardsString = ""
+  let cardAnimationDelay = 0
+  cards.forEach((value) => {
+    if (filtro === 0) {
+      cardsString = cardsString + value.outerHTML
+    } else if (value.textContent.includes(`${filtro}ª Rodada`)) {
+      cardsString =
+        cardsString +
+        `<div class="card" style="animation-delay: ${cardAnimationDelay}s">${value.innerHTML}</div>`
+      cardAnimationDelay += 0.2
+    }
+  })
 
-  if (botaotodas.style.backgroundColor === "rgba(0, 0, 0, 0.6)") {
-    botaotodas.style.backgroundColor = "white"
-  } else {
-    botaotodas.style.backgroundColor = "white"
-  }
+  document.querySelector("#cards").innerHTML = cardsString
 }
