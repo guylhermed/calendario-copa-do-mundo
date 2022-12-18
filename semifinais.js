@@ -38,13 +38,13 @@ document.querySelector("#cardsmata").innerHTML =
     "semifinal 1",
     "13/12",
     "terça",
-    createGameMata("argentina", "16:00", "croacia", "13")
+    createGameMata("argentina", "3 x 0", "croacia", "13")
   ) +
   createCardMata(
     "semifinal 2",
     "14/12",
     "quarta",
-    createGameMata("frança", "16:00", "marrocos", "14")
+    createGameMata("frança", "2 x 0", "marrocos", "14")
   )
 
 // Modificações nos estilos para mostrar/esconder fase de grupo ou fase mata-mata
